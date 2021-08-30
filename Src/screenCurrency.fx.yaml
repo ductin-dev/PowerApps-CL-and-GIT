@@ -1,0 +1,93 @@
+screenCurrency As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =768
+        OnSelect: |-
+            =Set(varCurrency,Text(Value(txtCurrency.Text),"#,##0.00"));
+            Reset(txtCurrency);
+        Width: =1343
+        X: =23
+        ZIndex: =1
+
+    txtCurrency As text:
+        BorderThickness: =1
+        Default: =varCurrency
+        DelayOutput: =true
+        Format: =TextFormat.Number
+        HintText: ="Please input currency"
+        OnChange: |-
+            =Set(varCurrency,Text(Value(Self.Text),"#,##0.00"));
+            Reset(Self);
+        OnSelect: |-
+            =Set(varCurrency,Text(Value(Self.Text)));
+            Reset(Self);
+        PaddingLeft: =5
+        Reset: =true
+        X: =173
+        Y: =176
+        ZIndex: =2
+
+    Label1 As label:
+        Align: =Align.Right
+        Text: ="$"
+        Width: =50
+        X: =123
+        Y: =176
+        ZIndex: =3
+
+    Label3 As label:
+        Text: |-
+            ="Currency:"
+        X: =152
+        Y: =136
+        ZIndex: =4
+
+    TextInput1_1 As text:
+        BorderThickness: =1
+        Default: ="100,1000"
+        HintText: ="Please input"
+        OnSelect: |-
+            =Set(varCurrency,Text(Value(txtCurrency.Text),"#,##0.00"));
+            Reset(txtCurrency);
+        PaddingLeft: =5
+        X: =173
+        Y: =256
+        ZIndex: =5
+
+    Label3_1 As label:
+        Text: |-
+            ="Name:"
+        X: =152
+        Y: =216
+        ZIndex: =6
+
+    TextInput1_2 As text:
+        BorderThickness: =1
+        Default: ="100,1000"
+        HintText: ="Please input"
+        OnSelect: |-
+            =Set(varCurrency,Text(Value(txtCurrency.Text),"#,##0.00"));
+            Reset(txtCurrency);
+        PaddingLeft: =5
+        X: =173
+        Y: =96
+        ZIndex: =7
+
+    Label3_2 As label:
+        Text: |-
+            ="ID:"
+        X: =152
+        Y: =56
+        ZIndex: =8
+
+    lblCurrency As label:
+        Align: =Align.Right
+        Color: =RGBA(204, 204, 204, 1)
+        Size: =12
+        Text: |-
+            =Text(Value(txtCurrency.Text),"$#,##0.00")
+        X: =343
+        Y: =176
+        ZIndex: =9
+

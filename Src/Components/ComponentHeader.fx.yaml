@@ -1,0 +1,105 @@
+ComponentHeader As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =50
+    Width: =1366
+    X: =40
+    Y: =40
+    ZIndex: =2
+
+    Rectangle1_10 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =
+        Fill: =RGBA(184, 0, 0, 1)
+        FocusedBorderThickness: =1
+        Height: =50
+        HoverFill: =
+        PressedFill: =
+        Width: =1366
+        ZIndex: =1
+
+    Button1_8 As button:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =If(ComponentHeader.varCurrentScreenId="scrExportPDF",RGBA(250, 191, 0, 1),RGBA(241, 244, 249, 1))
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =31
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(LookUp(cltnNavigation, Id = "scrExportPDF", Screen), ScreenTransition.Fade);
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =1
+        RadiusBottomRight: =1
+        RadiusTopLeft: =1
+        RadiusTopRight: =1
+        Size: =12.01
+        Text: ="Export PDF"
+        Width: =135.11
+        X: =462
+        Y: =9
+        ZIndex: =2
+
+    Button1_10 As button:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =If(ComponentHeader.varCurrentScreenId="scrExportExcel",RGBA(250, 191, 0, 1),RGBA(241, 244, 249, 1))
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =31
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(LookUp(cltnNavigation, Id = "scrExportExcel", Screen), ScreenTransition.Fade);
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =1
+        RadiusBottomRight: =1
+        RadiusTopLeft: =1
+        RadiusTopRight: =1
+        Size: =12.01
+        Text: ="Export Excel"
+        Width: =135.11
+        X: =615
+        Y: =9
+        ZIndex: =3
+
+    Button1_9 As button:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =If(ComponentHeader.varCurrentScreenId="scrAttachment",RGBA(250, 191, 0, 1),RGBA(241, 244, 249, 1))
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =31
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(LookUp(cltnNavigation, Id = "scrAttachment", Screen), ScreenTransition.Fade);
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =1
+        RadiusBottomRight: =1
+        RadiusTopLeft: =1
+        RadiusTopRight: =1
+        Size: =12.01
+        Text: ="Attachment"
+        Width: =135.11
+        X: =769
+        Y: =9
+        ZIndex: =4
+

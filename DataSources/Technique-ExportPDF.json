@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "96c9b803-6d1c-49e4-ab17-b8d2760ea61e",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Technique-ExportPDF",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

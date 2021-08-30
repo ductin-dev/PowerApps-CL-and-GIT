@@ -1,0 +1,133 @@
+ComponentAttachment As CanvasComponent:
+    FileLink: =varFileLink
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =91
+    SavedLink: =""
+    Width: =335
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    imageAttachment_2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =attachmentQualificationPlan_3.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =Last(attachmentQualificationPlan_3.Attachments).Value
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =attachmentQualificationPlan_3.Width
+        X: =attachmentQualificationPlan_3.X
+        Y: =attachmentQualificationPlan_3.Y
+        ZIndex: =1
+
+    attachmentQualificationPlan_3 As attachments:
+        BorderColor: =Transparent
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =If(!IsBlank(lblFileName_2.Text), DisplayMode.Disabled, DisplayMode.Edit) 
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =90
+        HoverFill: =RGBA(0, 0, 0, 0)
+        IsInDataCard: =true
+        ItemColor: =RGBA(0, 0, 0, 1)
+        ItemFill: =RGBA(0, 120, 212, 1)
+        ItemHoverColor: =RGBA(51, 51, 51, 1)
+        ItemHoverFill: =RGBA(212, 212, 212, 1)
+        Items: =//Parent.Default
+        ItemSpacing: =12
+        MaxAttachments: =1
+        MaxAttachmentsText: =""
+        NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+        NoAttachmentsText: =""
+        OnAddFile: |-
+            =Set(varAttachment, JSON(imageAttachment_2.Image, JSONFormat.IncludeBinaryData));
+            Set(varAttachmentBase64, Mid(varAttachment, Find(",", varAttachment) + 1, Len(varAttachment) - Find(",", varAttachment) - 1));
+            Set(varFileLink, 'Technique-Attachment'.Run(Last(attachmentQualificationPlan_3.Attachments).Name, varAttachmentBase64).filelink);
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Size: =10.5
+        Tooltip: =
+        Width: =Parent.Width
+        ZIndex: =2
+
+    IconRemoveAttachment_2 As icon.Trash:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =24
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Trash
+        OnSelect: =Reset(attachmentQualificationPlan_3); Set(varFileLink, Blank())
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Delete this attachment"
+        Visible: =If(!IsBlank(lblFileName_2.Text), true, false)
+        Width: =32
+        X: =303
+        Y: =8
+        ZIndex: =3
+
+    lblFileName_2 As text:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =0
+        Color: =RGBA(51, 51, 51, 1)
+        Default: |
+            =//Last(attachmentQualificationPlan_3.Attachments).Name
+            If(!IsBlank(Parent.FileLink), Last(Split(Parent.FileLink, "[@@]")).Result, !IsBlank(Parent.SavedLink), Last(Split(Parent.FileLink, "||")).Result, Blank())
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        HintText: ="There is nothing attached."
+        HoverBorderColor: =Transparent
+        HoverColor: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Italic: =true
+        OnChange: =Notify(Self.Text,NotificationType.Information, 3000)//If(!IsBlank(Self.Text), Notify(Self.Text,NotificationType.Information, 3000))
+        OnSelect: =
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =10.5
+        Tooltip: ="Click to download attachment"
+        Width: =303
+        ZIndex: =4
+
+    btnDownloadFile As button:
+        BorderThickness: =0
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        HoverFill: =
+        OnSelect: =If(!IsBlank(Parent.FileLink), Launch(First(Split(Parent.FileLink, ";")).Result),!IsBlank(Parent.SavedLink), Launch(First(Split(Parent.SavedLink, ";")).Result), false)
+        PressedFill: =
+        Text: =""
+        Width: =303
+        ZIndex: =5
+

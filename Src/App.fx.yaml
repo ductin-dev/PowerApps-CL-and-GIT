@@ -1,0 +1,19 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =//Sample data
+        ClearCollect(cltnStudents,
+            {Id: 1, Name: "Hien", Age: 21, Class: "SE1401"},
+            {Id: 2, Name: "Son", Age: 21, Class: "SE1404"},
+            {Id: 3, Name: "Tin", Age: 21, Class: "SE1401"},
+            {Id: 4, Name: "Giang", Age: 21, Class: "GD1401"},
+            {Id: 5, Name: "Huy", Age: 23, Class: "SE1402"},
+            {Id: 6, Name: "Go", Age: 22, Class: "GD1401"}
+        );
+        //Navigation bar collection
+        ClearCollect(cltnNavigation,
+            {Id: "scrExportPDF", Screen: scrExportPDF},
+            {Id: "scrExportExcel", Screen: scrExportExcel},
+            {Id: "scrAttachment", Screen: scrAttachment}
+        )
+

@@ -1,0 +1,50 @@
+scrAttachment As screen:
+
+    Form1 As form:
+        DataSource: ='Attachment List'
+        DefaultMode: =FormMode.New
+        Height: =200
+        Width: =400
+        X: =515
+        Y: =105
+        ZIndex: =2
+
+        Link_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Link"
+            Default: =ThisItem.Link
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Link"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =185
+            MaxLength: =DataSourceInfo([@'Attachment List'], DataSourceInfo.MaxLength, "Link")
+            Required: =false
+            Update: =
+            Width: =399
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+            ComponentAttachment_1 As ComponentAttachment:
+                Height: =100
+                SavedLink: =ThisItem.Link
+                Width: =385
+                X: =12
+                Y: =60
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Attachment"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+    ComponentHeader_3 As ComponentHeader:
+        varCurrentScreenId: ="scrAttachment"
+        X: =0
+        Y: =0
+        ZIndex: =3
+

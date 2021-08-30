@@ -1,0 +1,138 @@
+{
+  "6ae8b6d9-9f9d-4177-afc0-95b4b8638cfa": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/96c9b8036d1c49e4ab17b8d2760ea61e-df3937b70fedb631",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-11.southeastasia.logic.azure.com:443/workflows/afbc71d0c6e5418b892f187335ab4db9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OY0DFxITPqV3zzgfOnk_JcPXKTUEVLC2Zdgc725AkA4",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/f01e930ab52e42b1b70fa8882b5d043b-fb40e998ebeb4ca28cdf5d6661b60bb8/providers/Microsoft.Logic/workflows/96c9b803-6d1c-49e4-ab17-b8d2760ea61e",
+      "workflowName": "96c9b803-6d1c-49e4-ab17-b8d2760ea61e",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/f01e930ab52e42b1b70fa8882b5d043b-fb40e998ebeb4ca28cdf5d6661b60bb8/providers/Microsoft.Logic/workflows/96c9b803-6d1c-49e4-ab17-b8d2760ea61e"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1438/1.0.1438.2324/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f": {
+          "value": "shared_sharepointonline"
+        },
+        "e1d8fef3-75e0-4c0d-be50-69b1b52f7a66": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "96c9b803-6d1c-49e4-ab17-b8d2760ea61e"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "e1d8fef3-75e0-4c0d-be50-69b1b52f7a66"
+        },
+        "shared_sharepointonline": {
+          "value": "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Technique-ExportPDF"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "e1d8fef3-75e0-4c0d-be50-69b1b52f7a66",
+      "shared_sharepointonline": "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f"
+    },
+    "dependents": [],
+    "id": "6ae8b6d9-9f9d-4177-afc0-95b4b8638cfa"
+  },
+  "cc7bfc06-2eb4-443c-b566-4d4ab904914f": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc9dc337-c6b7-4201-a9da-2fe968d12dc1",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-20.southeastasia.logic.azure.com:443/workflows/b5c452c5ef594afc81fe07c28913ac80/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O3gmZwEJrqkRBt65iDbs9pO4QUujkZ0LeEKPND2yYEk",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/f01e930ab52e42b1b70fa8882b5d043b-fb40e998ebeb4ca28cdf5d6661b60bb8/providers/Microsoft.Logic/workflows/cc9dc337-c6b7-4201-a9da-2fe968d12dc1",
+      "workflowName": "cc9dc337-c6b7-4201-a9da-2fe968d12dc1",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/f01e930ab52e42b1b70fa8882b5d043b-fb40e998ebeb4ca28cdf5d6661b60bb8/providers/Microsoft.Logic/workflows/cc9dc337-c6b7-4201-a9da-2fe968d12dc1"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1438/1.0.1438.2324/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cc9dc337-c6b7-4201-a9da-2fe968d12dc1"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Technique-Attachment"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f"
+    },
+    "dependents": [],
+    "id": "cc7bfc06-2eb4-443c-b566-4d4ab904914f"
+  },
+  "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0f33c77ee8314ae08dac44ed077123c3",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1505/1.0.1505.2520/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://fptsoftware362.sharepoint.com/sites/G5TrainingPowerApp/HienTQ4": {
+        "dataSources": {
+          "Attachment List": {
+            "tableName": "042a26e9-bf3f-4718-9549-16196da7c87b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Attachment List"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "cc7bfc06-2eb4-443c-b566-4d4ab904914f",
+      "6ae8b6d9-9f9d-4177-afc0-95b4b8638cfa"
+    ],
+    "id": "d92b166b-3f75-42ae-b4fc-cbb7d6b6cc2f"
+  },
+  "e1d8fef3-75e0-4c0d-be50-69b1b52f7a66": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/21ff9ac66fe843c48d4ed607bdb7972a",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/depfeife/special-train/1.0.1489.2478/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "6ae8b6d9-9f9d-4177-afc0-95b4b8638cfa"
+    ],
+    "id": "e1d8fef3-75e0-4c0d-be50-69b1b52f7a66"
+  }
+}

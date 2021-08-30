@@ -1,0 +1,153 @@
+scrExportPDF As screen:
+
+    HtmlText As htmlViewer:
+        Height: =768
+        HtmlText: |-
+            ="<!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            th, td {
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even){background-color: #f2f2f2}
+            
+            th {
+              background-color: #3860B2;
+              color: white;
+            }
+            </style>
+            </head>
+            <body>
+            <h2>LIST STUDENTS</h2>
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+              </tr>
+              " & Concat(cltnStudents, "<tr>
+                <td>" & ThisRecord.Id & "</td>
+                <td>" & ThisRecord.Name & "</td>
+                <td>" & ThisRecord.Age & "</td>
+                <td>" & ThisRecord.Class & "</td>
+              </tr>" ) & "
+            </table>
+            </body>
+            </html>
+            "
+        Visible: =false
+        Width: =1366
+        ZIndex: =1
+
+    tblStudents As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =296
+        Items: =cltnStudents
+        Width: =800
+        X: =288
+        Y: =176
+        ZIndex: =2
+
+        Id_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Id"
+            FieldName: ="Id"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Id
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        Name_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.Name
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Age_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Age"
+            FieldName: ="Age"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Age
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Class_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Class"
+            FieldName: ="Class"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Class
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+    lblTitle As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="LIST STUDENTS"
+        Width: =200
+        X: =588
+        Y: =116
+        ZIndex: =3
+
+    btnExportPDF As button:
+        BorderThickness: =0
+        Fill: =RGBA(54, 176, 75, 1)
+        HoverFill: =ColorFade(Self.Fill, -10%)
+        OnSelect: |
+            =//Use collection for waiting workflow run completely before continue running other code below
+            ClearCollect(cltnResponse,
+                'Technique-ExportPDF'.Run(HtmlText.HtmlText)
+            );
+            //download
+            Launch("https://fptsoftware362.sharepoint.com/sites/G5TrainingPowerApp/HienTQ4/_layouts/15/download.aspx?UniqueId=a203b652%2Dea96%2D479b%2Da4e7%2Da3e095ca11f4")
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(Self.Fill,-20%)
+        Size: =13
+        Text: ="Export to PDF"
+        X: =928
+        Y: =116
+        ZIndex: =4
+
+    ComponentHeader_1 As ComponentHeader:
+        varCurrentScreenId: ="scrExportPDF"
+        X: =0
+        Y: =0
+        ZIndex: =5
+

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "cc9dc337-c6b7-4201-a9da-2fe968d12dc1",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Technique-Attachment",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

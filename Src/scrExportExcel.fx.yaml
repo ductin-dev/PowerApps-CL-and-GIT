@@ -1,0 +1,13 @@
+scrExportExcel As screen:
+
+    ComponentHeader_2 As ComponentHeader:
+        varCurrentScreenId: ="scrExportExcel"
+        X: =0
+        Y: =0
+
+    Label2 As label:
+        Text: ="Export Excel"
+        X: =588
+        Y: =100
+        ZIndex: =1
+

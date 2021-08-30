@@ -1,0 +1,37 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "ComponentHeader",
+    "TemplateGuid": "b66b07c3fa2245e49a78b98f5e9a8784"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Current Screen",
+      "Hidden": false,
+      "Name": "varCurrentScreenId",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Current Screen",
+      "Type": "{\"Version\":\"1.316\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637659059873275522",
+  "Name": "b66b07c3fa2245e49a78b98f5e9a8784",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "395bc73351584023a50aa52e874bad62",
+  "Version": "637659060563810318"
+}
